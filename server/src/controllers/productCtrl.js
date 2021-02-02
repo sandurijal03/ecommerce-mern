@@ -48,15 +48,7 @@ const productCtrl = {
   },
   updateProduct: async (req, res) => {
     try {
-      const {
-        product_id,
-        title,
-        price,
-        description,
-        content,
-        images,
-        category,
-      } = req.body;
+      const { title, price, description, content, images, category } = req.body;
 
       if (!images) {
         return res.status(400).json({ msg: 'No Images  upload' });
