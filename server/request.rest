@@ -2,9 +2,10 @@ POST http://localhost:3001/user/register
 Content-Type: application/json
 
 {
-  "name": "someone",
-  "email": "someone@example.com",
-  "password": "someone"
+  "name": "sandy",
+  "email": "sandy@example.com",
+  "password": "sandy@1",
+  "role": "admin"
 }
 
 ###
@@ -12,14 +13,38 @@ POST http://localhost:3001/user/login
 Content-Type: application/json
 
 {
-  "email": "someone@example.com",
-  "password": "someone"
+  "email": "sandy@example.com",
+  "password": "sandy@1"
 }
 
 ###
 GET http://localhost:3001/user/infor
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMTkyNzllYTkwNzU0ZmZmYTRlNTE3NSIsImlhdCI6MTYxMjI2NDUxNSwiZXhwIjoxNjEyMzUwOTE1fQ.27n4Qhl18yNL1zdn9qDDi79BHh1AL5qNYuQjjlWz5bU
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMTk0NjM3N2UwZDUzODk3ZDk4Nzk0YSIsImlhdCI6MTYxMjI3MzIwMCwiZXhwIjoxNjEyMzU5NjAwfQ.kZJVr9R2PSR7Ybw2lZVH1XymAJ_tdJnGntBXC2oKhvk
 
 ###
 GET http://localhost:3001/user/refresh_token
-s
+
+###
+POST http://localhost:3001/api/category
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMTk0NjM3N2UwZDUzODk3ZDk4Nzk0YSIsImlhdCI6MTYxMjI3MzQ3OSwiZXhwIjoxNjEyMzU5ODc5fQ.aWyoqxn7cxHmFxE4b8j3x6MQKDZOxu3p1vSDmDspP3s
+
+{
+  "name": "third product"
+}
+
+###
+GET http://localhost:3001/api/category
+
+###
+DELETE http://localhost:3001/api/category/6019584c16285fdbc3d7a7a0
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMTk0NjM3N2UwZDUzODk3ZDk4Nzk0YSIsImlhdCI6MTYxMjI3MzQ3OSwiZXhwIjoxNjEyMzU5ODc5fQ.aWyoqxn7cxHmFxE4b8j3x6MQKDZOxu3p1vSDmDspP3s
+
+###
+PUT http://localhost:3001/api/category/6019583d16285fdbc3d7a79f
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMTk0NjM3N2UwZDUzODk3ZDk4Nzk0YSIsImlhdCI6MTYxMjI3MzQ3OSwiZXhwIjoxNjEyMzU5ODc5fQ.aWyoqxn7cxHmFxE4b8j3x6MQKDZOxu3p1vSDmDspP3s
+
+{
+  "name": "updated second product"
+}
