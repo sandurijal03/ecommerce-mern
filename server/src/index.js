@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser';
 
 import userApi from './apis/userApi';
 import categoryApi from './apis/categoryApi';
+import uploadApi from './apis/upload';
 
 const app = express();
 
@@ -36,6 +37,7 @@ mongoose.connect(
 
 app.use('/user', userApi);
 app.use('/api', categoryApi);
+app.use('/api', uploadApi);
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => console.log('server is listening on port ', port));
