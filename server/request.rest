@@ -1,0 +1,25 @@
+POST http://localhost:3001/user/register 
+Content-Type: application/json
+
+{
+  "name": "someone",
+  "email": "someone@example.com",
+  "password": "someone"
+}
+
+###
+POST http://localhost:3001/user/login 
+Content-Type: application/json
+
+{
+  "email": "someone@example.com",
+  "password": "someone"
+}
+
+###
+GET http://localhost:3001/user/infor
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMTkyNzllYTkwNzU0ZmZmYTRlNTE3NSIsImlhdCI6MTYxMjI2NDUxNSwiZXhwIjoxNjEyMzUwOTE1fQ.27n4Qhl18yNL1zdn9qDDi79BHh1AL5qNYuQjjlWz5bU
+
+###
+GET http://localhost:3001/user/refresh_token
+s
