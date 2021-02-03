@@ -48,3 +48,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMTk0NjM3N2UwZDUz
 {
   "name": "updated second product"
 }
+
+###
+POST http://localhost:3001/api/upload
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMTk0NjM3N2UwZDUzODk3ZDk4Nzk0YSIsImlhdCI6MTYxMjM2ODM5OSwiZXhwIjoxNjEyNDU0Nzk5fQ.oDmvm3-qhDTKD_PFHXyO-v_hyVkGHW2ec8Oo0HBRzeg

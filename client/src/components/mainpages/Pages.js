@@ -4,16 +4,20 @@ import NotFound from '../utils/NotFound/NotFound';
 import Login from './auth/Login';
 import Register from './auth/Register';
 import Cart from './cart/Cart';
+import DetailProduct from './detailProduct/DetailProduct';
 import Products from './products/Products';
 
 const Pages = () => {
   return (
     <Switch>
-      <Route path='/products' component={Products} />
-      <Route path='/login' component={Login} />
-      <Route path='/register' component={Register} />
-      <Route path='/cart' component={Cart} />
-      <Route path='*' component={NotFound} />
+      <Route path='/' exact component={Products} />
+      <Route path='/detail/:id' exact component={DetailProduct} />
+
+      <Route exact path='/login' component={Login} />
+      <Route exact path='/register' component={Register} />
+      <Route exact path='/cart' component={Cart} />
+
+      <Route path='*' exact component={NotFound} />
       <Cart />
     </Switch>
   );
