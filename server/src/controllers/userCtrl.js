@@ -52,7 +52,7 @@ const userCtrl = {
 
       if (!user)
         return res.status(400).json({
-          msg: 'User doesnot eexist',
+          msg: 'User doesnot exist',
         });
 
       const isMatch = await compare(password, user.password);
